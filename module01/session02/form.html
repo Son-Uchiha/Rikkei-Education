@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Đăng nhập</h3>
+    <form action="./lists.html" method="get">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        name="username"
+        placeholder="Vui lòng nhập username"
+        id="username"
+      />
+      <br />
+      <label for="password">Password</label>
+      <input
+        type="password"
+        name="password"
+        placeholder="Vui lòng nhập mật khẩu"
+        id="password"
+      />
+      <br />
+      <label for="search">Tên khóa học: </label><br />
+      <input
+        type="search"
+        id="search"
+        name="search"
+        placeholder="Nhập tên khóa học để tìm kiếm"
+      /><br />
+
+      <label for="gender">Giới tính: </label><br />
+      <input type="radio" name="gender" value="Men" />Nam<br />
+      <input type="radio" name="gender" value="Women" />Nữ<br />
+
+      <label for="hobby">Sở thích: </label><br />
+      <input type="checkbox" name="hobby" value="coding" />Lập trình<br />
+      <input type="checkbox" name="hobby" value="reading" />Đọc sách<br />
+      <input type="checkbox" name="hobby" value="listenning" />Nghe nhạc<br />
+      <button>Đăng nhập</button>
+      <button type="reset">reset</button>
+    </form>
+  </body>
+</html>

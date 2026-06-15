@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <h2 class="text-[20px] font-[700] mb-4">Khảo sát dịch vụ khách hàng</h2>
+    <form action="#" method="POST" class="max-w-xl space-y-4">
+      <div class="flex gap-2">
+        <label for="age">Độ tuổi của bạn:</label>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          min="1"
+          max="120"
+          class="w-16 px-1 border border-gray-400 rounded-[3px] bg-white text-sm focus:outline-none focus:border-blue-500"
+        />
+      </div>
+
+      <fieldset class="border p-3 rounded-[3px]">
+        <legend>Giới tính của bạn là gì ?</legend>
+        <div class="flex gap-3">
+          <label for="nam" class="flex gap-1 cursor-pointer">
+            <input
+              type="radio"
+              id="nam"
+              name="gender"
+              value="Nam"
+              class="cursor-pointer"
+            />
+            Nam
+          </label>
+          <label for="nu" class="flex gap-1 cursor-pointer">
+            <input
+              type="radio"
+              id="nu"
+              name="gender"
+              value="Nữ"
+              class="cursor-pointer"
+            />
+            Nữ
+          </label>
+          <label for="khac" class="flex gap-1 cursor-pointer">
+            <input
+              type="radio"
+              id="nu"
+              name="gender"
+              value="Khác"
+              class="cursor-pointer"
+              checked
+            />
+            khác
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="border p-3 rounded-[3px]">
+        <legend>Dịch vụ bạn đang quan tâm (có thể chọn nhiều)</legend>
+        <div class="flex gap-3">
+          <label for="website" class="flex gap-1 cursor-pointer">
+            <input
+              type="checkbox"
+              id="website"
+              name="server"
+              value="website"
+              class="cursor-pointer"
+            />
+            Website
+          </label>
+          <label for="mobile-app" class="flex gap-1 cursor-pointer">
+            <input
+              type="checkbox"
+              id="mobile-app"
+              name="server"
+              value="mobile-app"
+              class="cursor-pointer"
+            />
+            Mobile App
+          </label>
+          <label for="marketing" class="flex gap-1 cursor-pointer">
+            <input
+              type="checkbox"
+              id="marketing"
+              name="server"
+              value="marketing"
+              class="cursor-pointer"
+            />
+            Marketing
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="flex gap-2">
+        <label for="country">Quốc gia đang sinh sống</label>
+        <select
+          name="country"
+          id="country"
+          class="border border-gray-400 text-sm rounded-[5px] focus:outline-none focus:border-blue-500"
+        >
+          <option value="">--Vui lòng chọn--</option>
+          <option value="Vietnam">Việt Nam</option>
+          <option value="Japan">Nhật Bản</option>
+          <option value="USA">Hoa Kỳ</option>
+        </select>
+      </div>
+
+      <button
+        type="submit"
+        class="border px-[5px] py-[2px] bg-gray-100 border-gray-400 hover:bg-gray-200 text-sm cursor-pointer rounded-[5px]"
+      >
+        Gửi thông tin
+      </button>
+    </form>
+  </body>
+</html>
