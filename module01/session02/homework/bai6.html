@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body class="p-5">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <h2 class="text-[20px] font-[700] mb-4">Hồ sơ thông tin cá nhân</h2>
+    <form action="#" method="POST" class="max-w-6xl">
+      <fieldset class="border p-2 border border-gray-400 mb-6">
+        <legend class="text-[15px] font-[500]">Thông tin cá nhân</legend>
+        <label for="name" class="mb-3 inline-block"
+          >Tên:
+          <input
+            type="text"
+            class="border border-gray-400 rounded-[5px] p-[3px] outline-none focus:border-sky-500"
+            placeholder="Nhập họ và tên ..."
+            id="name"
+          />
+        </label>
+        <br />
+        <label for="birth" class="inline-block mb-2">
+          Ngày sinh:
+          <input
+            type="date"
+            class="border border-gray-400 rounded-[5px] p-[3px] outline-none focus:border-sky-500"
+            id="birth"
+          />
+        </label>
+      </fieldset>
+
+      <fieldset class="border p-2 border border-gray-400 mb-6">
+        <legend class="text-[15px] font-[500]">Thông tin liên hệ</legend>
+        <label for="email" class="mb-3 inline-block"
+          >Email:
+          <input
+            type="email"
+            class="border border-gray-400 rounded-[5px] p-[3px] outline-none focus:border-sky-500"
+            id="email"
+            placeholder="example@email.com"
+          />
+        </label>
+        <br />
+        <label for="phone" class="inline-block mb-2">
+          Số điện thoại:
+          <input
+            pattern="“[0][1-9][0-9]{8}”"
+            class="border border-gray-400 rounded-[5px] p-[3px] outline-none focus:border-sky-500"
+            id="phone"
+            placeholder="0949543969"
+          />
+        </label>
+      </fieldset>
+
+      <label class="text-[15px] font-[500] mb-3 inline-block" for="ghichu"
+        >Ghi chú bổ sung:</label
+      >
+      <br />
+      <textarea
+        name="ghichu"
+        id="ghichu"
+        class="border text-sm border-gray-400 p-[3px] outline-none focus:border-sky-500"
+        placeholder="Nhập ghi chú của bạn tại đây ..."
+        rows="4"
+        cols="50"
+      ></textarea>
+      <br />
+      <button
+        type="submit"
+        class="border px-[5px] py-[2px] bg-gray-100 border-gray-400 hover:bg-gray-200 text-sm cursor-pointer rounded-[5px] mt-4"
+      >
+        Lưu hồ sơ
+      </button>
+    </form>
+  </body>
+</html>
