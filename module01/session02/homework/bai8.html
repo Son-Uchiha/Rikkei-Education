@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="m-3">
+    <h1 class="text-[20px] font-[700] mb-4">Đăng Ký Đặt Vé Sự Kiện Âm Nhạc</h1>
+    <form action="#" class="max-w-3xl" method="POST">
+      <label for="name" class="mb-3 inline-block">
+        Họ và tên:
+        <input
+          type="text"
+          class="border border-gray-500 rounded-[4px] focus:border-sky-500 outline-none"
+          id="name"
+          placeholder="Nhập họ và tên..."
+        />
+      </label>
+      <br />
+      <label for="number" class="mb-3 inline-block">
+        Số lượng vé:
+        <input
+          type="number"
+          class="border border-gray-500 rounded-[4px] focus:border-sky-500 outline-none"
+          min="1"
+          max="5"
+        />
+      </label>
+      <br />
+      <label for="id-vip" class="mb-3 inline-block">
+        Mã vẽ VIP (Đã cấp sẵn)
+        <input
+          type="text"
+          class="border border-gray-500 rounded-[4px] outline-none pl-[3px]"
+          value="MUSIC-VIP-2026"
+          id="id-vip"
+        />
+      </label>
+      <br />
+      <label for="id" class="mb-3 inline-block">
+        Mã giảm giá nội bộ
+        <input
+          type="text"
+          class="border border-gray-400 rounded-[4px] outline-none pl-[3px] bg-gray-200 text-gray-700"
+          value="NOT-ELIGIBLE"
+          id="id"
+        />
+      </label>
+      <br />
+      <button
+        type="submit"
+        class="cursor-pointer mt-3 border px-2 py-1 rounded-[4px] border-gray-500 bg-gray-200 hover:bg-gray-100"
+      >
+        Xác nhận đặt vé
+      </button>
+    </form>
+  </body>
+</html>
