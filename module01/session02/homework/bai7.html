@@ -4,6 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-[20px] font-[700] mb-4">Báo Cáo Tài Chính Năm</h2>
+      <h3 class="text-[17px] text-center font-[400]">
+        Báo cáo doanh thu và lợi nhuận các quý trong năm
+      </h3>
+      <div class="overflow-x-auto">
+        <table class="mx-auto w-full">
+          <thead>
+            <tr>
+              <th class="border px-3 py-2 w-3/7">Chi tiêu</th>
+              <th class="border px-3 py-2">Quý 1</th>
+              <th class="border px-3 py-2">Quý 2</th>
+              <th class="border px-3 py-2">Quý 3</th>
+              <th class="border px-3 py-2">Quý 4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="border px-3 py-2 w-3/7">Doanh thu (Tỷ VNĐ)</th>
+              <td class="border text-center">500</td>
+              <td class="border text-center">650</td>
+              <td class="border text-center">700</td>
+              <td class="border text-center">850</td>
+            </tr>
+            <tr>
+              <th class="border px-3 py-2 w-3/7">Lợi nhuận (Tỷ VND)</th>
+              <td class="border text-center">120</td>
+              <td class="border text-center">180</td>
+              <td class="border text-center">210</td>
+              <td class="border text-center">250</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
 </html>
