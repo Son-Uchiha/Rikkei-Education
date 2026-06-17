@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="m-4">
+    <h2 class="text-[20px] font-[500] mb-4">Nộp hồ sơ ứng tuyển</h2>
+    <form action="#" method="POST" class="font-[400]">
+      <fieldset class="border border-gray-400 p-4 mb-4">
+        <legend>Thông tin liên hệ</legend>
+        <label for="name" class="inline-block mb-4">
+          Họ và tên:
+          <input
+            type="text"
+            class="border border-gray-400 rounded-[3px] outline-none focus:border-sky-500"
+            id="name"
+          />
+        </label>
+        <br />
+        <label for="phone">
+          Số điện thoại:
+          <input
+            type="text"
+            class="border border-gray-400 rounded-[3px] outline-none focus:border-sky-500"
+            id="phone"
+          />
+        </label>
+      </fieldset>
+
+      <fieldset class="border border-gray-400 p-4 mb-4">
+        <legend>Hồ sơ đính kèm</legend>
+        <label for="cv">
+          Tải lên CV (Định dạng PDF/Word):
+          <input
+            type="file"
+            class="file:bg-gray-100 file:rounded-[3px] file:border file:border-gray-400 file:px-[3px]"
+            id="cv"
+          />
+        </label>
+      </fieldset>
+
+      <button
+        type="submit"
+        class="border px-[5px] py-[2px] bg-gray-100 border-gray-400 hover:bg-gray-200 text-sm cursor-pointer rounded-[5px]"
+      >
+        Nộp hồ sơ
+      </button>
+    </form>
+  </body>
+</html>
