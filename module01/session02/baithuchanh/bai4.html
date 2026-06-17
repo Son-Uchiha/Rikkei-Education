@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lịch công tác tuần</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="m-8 text-black font-sans flex flex-col items-center">
+    <div class="w-full max-w-[850px] text-center">
+      <h2 class="text-[22px] font-bold mb-1">Lịch Công Tác Tuần</h2>
+      <p class="text-sm font-normal mb-4">
+        Lịch làm việc chi tiết từ Thứ 2 đến Thứ 6
+      </p>
+
+      <table class="w-full border border-black border-collapse text-sm">
+        <thead>
+          <tr class="bg-white">
+            <th class="border border-black py-2 font-bold w-[15%] text-center">
+              Thời gian
+            </th>
+            <th class="border border-black py-2 font-bold w-[15%] text-center">
+              Thứ 2
+            </th>
+            <th class="border border-black py-2 font-bold w-[15%] text-center">
+              Thứ 3
+            </th>
+            <th class="border border-black py-2 font-bold w-[15%] text-center">
+              Thứ 4
+            </th>
+            <th class="border border-black py-2 font-bold w-[20%] text-center">
+              Thứ 5
+            </th>
+            <th class="border border-black py-2 font-bold w-[20%] text-center">
+              Thứ 6
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class="text-center h-[50px]">
+            <td class="border border-black font-bold bg-white">Sáng</td>
+            <td colspan="3" class="border border-black px-2">Họp giao ban</td>
+            <td rowspan="2" class="border border-black px-2 align-middle">
+              Khảo sát thực địa
+            </td>
+            <td class="border border-black px-2">Làm việc tại văn phòng</td>
+          </tr>
+
+          <tr class="text-center h-[50px]">
+            <td class="border border-black font-bold bg-white">Chiều</td>
+            <td class="border border-black px-2">Xử lý email</td>
+            <td class="border border-black px-2">Lên kế hoạch</td>
+            <td class="border border-black px-2">Họp nhóm</td>
+            <td class="border border-black px-2">Báo cáo tuần</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
