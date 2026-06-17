@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biểu mẫu đăng nhập hệ thống</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="m-8 text-black font-sans">
+    <div class="max-w-[450px] mx-auto">
+      <h2 class="text-[22px] font-bold mb-4 text-left">Đăng nhập hệ thống</h2>
+
+      <form action="#" method="POST" class="space-y-4 text-sm">
+        <div class="flex items-center">
+          <label for="username" class="w-[120px] cursor-pointer">
+            Tên đăng nhập:
+          </label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Nhập tên đăng nhập..."
+            required
+            class="border border-gray-400 rounded-[2px] px-1 py-[2px] outline-none focus:border-sky-500 flex-1 max-w-[220px]"
+          />
+        </div>
+
+        <div class="flex items-center">
+          <label for="password" class="w-[120px] cursor-pointer">
+            Mật khẩu:
+          </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Nhập mật khẩu..."
+            required
+            class="border border-gray-400 rounded-[2px] px-1 py-[2px] outline-none focus:border-sky-500 flex-1 max-w-[220px]"
+          />
+        </div>
+
+        <div class="pl-[120px] space-x-2 pt-1">
+          <button
+            type="submit"
+            class="border px-[6px] py-[2px] bg-gray-100 border-gray-400 hover:bg-gray-200 text-xs cursor-pointer rounded-[3px]"
+          >
+            Đăng nhập
+          </button>
+
+          <button
+            type="reset"
+            class="border px-[6px] py-[2px] bg-gray-100 border-gray-400 hover:bg-gray-200 text-xs cursor-pointer rounded-[3px]"
+          >
+            Xóa trắng
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
