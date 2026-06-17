@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="m-6">
+    <section class="max-w-3xl mb-5">
+      <h2 class="text-[25px] font-[500] mb-4">Chi tiết Hóa đơn Mua hàng</h2>
+      <p class="text-center">Hóa đơn điện tử #HD-20260310</p>
+      <table class="m-3 w-[700px]">
+        <thead>
+          <tr class="border border-gray-400">
+            <th class="border border-gray-400 py-4 px-2">Tên Sản Phẩm</th>
+            <th class="border border-gray-400 py-4 px-2">Chi tiết</th>
+            <th class="border border-gray-400 py-4 px-2">Đơn giá</th>
+            <th>Thành tiền</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border border-gray-400">
+            <td class="border border-gray-400 py-4 px-2 text-center">
+              Áo thun Lập trình viên
+            </td>
+            <td class="border border-gray-400 py-4 px-2">
+              <ul class="list-disc ml-6">
+                <li>Màu sắc: Đen</li>
+                <li>Kích cỡ: XL</li>
+                <li>Chất liệu: Cotton 100%</li>
+              </ul>
+            </td>
+            <td class="border border-gray-400 py-4 px-2 text-center">
+              250.000đ
+            </td>
+            <td class="border border-gray-400 py-4 px-2 text-center">
+              250.000đ
+            </td>
+          </tr>
+          <tr class="border border-gray-400">
+            <td class="border border-gray-400 py-4 px-2 text-center">
+              Bàn phím cơ bản
+            </td>
+            <td class="border border-gray-400 py-4 px-2">
+              <ul class="list-disc ml-6">
+                <li>Switch: Red</li>
+                <li>Layout: TKL</li>
+              </ul>
+            </td>
+            <td class="border border-gray-400 py-4 px-2 text-center">
+              800.000đ
+            </td>
+            <td class="border border-gray-400 py-4 px-2 text-center">
+              800.000đ
+            </td>
+          </tr>
+          <tr>
+            <td
+              colspan="3"
+              class="border border-gray-400 py-4 px-2 text-center"
+            >
+              <strong>Tổng tiền thanh toán:</strong>
+            </td>
+            <td class="border border-gray-400 py-4 px-2 text-center">
+              <strong>1.050.000đ</strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <hr class="border-gray-500 mb-6" />
+    <section>
+      <h2 class="text-[25px] font-[500] mb-4">Đánh giá trải nghiệm hóa đơn</h2>
+      <form action="#" method="POST">
+        <fieldset class="border p-4">
+          <legend>Phản hồi của bạn</legend>
+          <label for="rating" class="inline-block mb-4">Mức độ hài lòng:</label>
+          <select
+            name="rating"
+            id="rating"
+            class="border border-gray-400 rounded"
+          >
+            <option value="">-- Vui lòng chọn số sao --</option>
+            <option value="5">5 Sao - Rất tốt</option>
+            <option value="4">4 Sao - Tốt</option>
+            <option value="3">3 Sao - Bình thường</option>
+            <option value="2">2 Sao - Kém</option>
+            <option value="1">1 Sao - Rất kém</option>
+          </select>
+          <br />
+          <label for="comment">Lời nhận xét chi tiết:</label>
+          <br />
+          <textarea
+            name="comment"
+            id="comment"
+            rows="3"
+            cols="60"
+            placeholder="Hãy chia sẻ trải nghiệm của bạn về sản phẩm và dịch vụ..."
+            class="border p-3"
+          ></textarea>
+        </fieldset>
+        <button
+          type="submit"
+          class="border px-[5px] py-[2px] bg-gray-100 border-gray-400 hover:bg-gray-200 text-sm cursor-pointer rounded-[5px] mt-4"
+        >
+          Gửi phản hồi
+        </button>
+      </form>
+    </section>
+  </body>
+</html>
