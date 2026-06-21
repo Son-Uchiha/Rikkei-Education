@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <style>
+    /* Tùy biến thêm class background shorthand kết hợp với cấu hình của Tailwind */
+    .bg-coffee-shorthand {
+      /* Kỹ thuật Shorthand: Màu nền | Đường dẫn ảnh | Chế độ lặp | Vị trí */
+      background: #e7dbcd
+        url("https://images.unsplash.com/photo-1509785307050-d4066910ec1e?q=80&w=1028&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+        no-repeat top left;
+      background-size: 100px;
+    }
+  </style>
+  <body>
+    <div
+      class="bg-coffee-shorthand border border-orange-600 w-[500px] rounded-xl px-8 py-9 shadow-md mx-auto my-20"
+    >
+      <h2
+        class="text-orange-600 text-2xl font-bold uppercase text-center tracking-[1px] mb-5"
+      >
+        Ưu đãi cuối tuần cực sốc
+      </h2>
+      <p class="text-justify text-stone-800 text-[15px] leading-relaxed">
+        Chào mừng bạn đến với không gian thưởng thức cà phê tuyệt vời nhất! Cuối
+        tuần này, chúng tôi mang tới chương trình khuyến mãi vô cùng đặc biệt:
+        Giảm giá ngay 30% cho tất cả các loại thức uống khi đi theo nhóm từ 3
+        người. Hãy rủ ngay hội bạn thân, tận hưởng những ly Latte ngọt ngào,
+        Espresso đậm đà trong không gian âm nhạc thư giãn, máy lạnh siêu mát mẻ
+        và Wi-Fi cực mạnh. Đừng bỏ lỡ cơ hội tuyệt vời để nạp năng lượng sau một
+        tuần làm việc căng thẳng bạn nhé!
+      </p>
+    </div>
+  </body>
+</html>
