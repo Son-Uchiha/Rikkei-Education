@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 8 - Pseudo-elements</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Sử dụng Pseudo-elements ::before cho dấu ngoặc kép */
+      .blockquote-text::before {
+        content: "“";
+        font-size: 4rem;
+        color: rgb(59, 130, 246);
+        opacity: 0.3;
+        position: absolute;
+        top: -20px;
+        left: -30px;
+      }
+
+      .blockquote-text::after {
+        content: "”";
+        font-size: 4rem;
+        color: rgb(59, 130, 246);
+        opacity: 0.3;
+        position: absolute;
+        bottom: -50px;
+        right: -20px;
+      }
+
+      /* Pseudo-element ::first-letter */
+      .blockquote-text p::first-letter {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: rgb(59, 130, 246);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 p-8 font-sans text-gray-800">
+    <div class="max-w-3xl mx-auto">
+      <!-- Blockquote -->
+      <div class="bg-gray-100 rounded-lg p-8 border-l-4 border-blue-500">
+        <div class="blockquote-text relative">
+          <p class="text-lg italic text-gray-700 leading-relaxed mb-6">
+            Đó phải không để`n từ việc có `gã`ng tạo ra từ gì đó lớn lao, mà từ
+            việc liên tục giải quyết`t các vấn`đề nhỏ nhất xung quanh cuộc số`ng
+            của bạn. Khi ban tập trung xây dựng sản phẩm mang lại giá trị thực
+            sự cho người dùng, nhữ`ng điều`u vi đại sẽ tự nhiên theo sau.
+          </p>
+        </div>
+        <div class="text-right text-gray-600 font-semibold">
+          - Tỷ phú công nghệ -
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
