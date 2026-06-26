@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu Cửa Hàng</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+
+    <div class="bg-white rounded-lg shadow-lg max-w-4xl w-full p-6">
+
+        <!-- Mobile: flex-col (ảnh trên, chữ dưới) | md: flex-row (ảnh trái 40%, chữ phải 60%) -->
+        <div class="flex flex-col md:flex-row gap-6">
+
+            <!-- Ảnh: mobile full width, md chiếm 40% -->
+            <div class="w-full md:w-2/5">
+                <img 
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop" 
+                    alt="Cửa hàng công nghệ" 
+                    class="w-full h-auto rounded-lg object-cover"
+                >
+            </div>
+
+            <!-- Văn bản: mobile full width, md chiếm 60% -->
+            <div class="w-full md:w-3/5">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Giới thiệu Cửa Hàng</h2>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                    Chào mừng bạn đến với hệ thống cửa hàng công nghệ hiện đại nhất. Chúng tôi 
+                    cung cấp đa dạng các thiết bị điện tử, từ máy tính, laptop đến điện thoại, phụ 
+                    kiện thông minh. Mọi sản phẩm đều được cam kết chính hãng 100%, bảo hành 
+                    uy tín và dịch vụ chăm sóc khách hàng tận tâm nhất.
+                </p>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Hãy cùng khám phá các sản phẩm tuyệt vời của hàng trăm thương hiệu được 
+                    trưng bày tại TechStore.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
