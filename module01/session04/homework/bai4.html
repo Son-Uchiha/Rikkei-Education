@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display None vs Visibility Hidden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white p-8 max-w-3xl mx-auto">
+    <!-- Mục tiêu -->
+    <h2 class="text-lg font-bold text-gray-800 mb-2">1. Mục tiêu</h2>
+    <ul class="list-disc pl-8 mb-4 text-gray-700">
+      <li>Hiểu rõ sự khác biệt giữa hai cách ẩn phần tử: display: none và visibility: hidden.</li>
+    </ul>
+
+    <!-- Mô tả -->
+    <h2 class="text-lg font-bold text-gray-800 mb-2">2. Mô tả</h2>
+    <p class="text-gray-700 mb-4">Tạo 3 khối vuông nằm cạnh nhau đại diện cho 3 sản phẩm.</p>
+
+    <!-- Hàng 1: display: none (hidden) -->
+    <ul class="list-disc pl-8 mb-4 text-gray-700">
+      <li>Ở hàng thứ nhất, ẩn khối ở giữa bằng cách xóa nó hoàn toàn khỏi layout.</li>
+    </ul>
+
+    <div class="flex gap-4 justify-center mb-8">
+      <div class="w-40 h-40 bg-emerald-400 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+        Sản phẩm 1
+      </div>
+      <!-- hidden = display: none → biến mất hoàn toàn, không chiếm chỗ -->
+      <div class="w-40 h-40 bg-emerald-400 rounded-lg items-center justify-center text-white font-bold text-lg hidden">
+        Sản phẩm 2
+      </div>
+      <div class="w-40 h-40 bg-purple-400 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+        Sản phẩm 3
+      </div>
+    </div>
+
+    <!-- Hàng 2: visibility: hidden (invisible) -->
+    <ul class="list-disc pl-8 mb-4 text-gray-700">
+      <li>Ở hàng thứ hai, ẩn khối ở giữa nhưng vẫn giữ nguyên không gian trống mà nó chiếm chỗ.</li>
+    </ul>
+
+    <div class="flex gap-4 justify-center">
+      <div class="w-40 h-40 bg-emerald-400 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+        Sản phẩm 4
+      </div>
+      <!-- invisible = visibility: hidden → ẩn nhưng vẫn chiếm chỗ trong layout -->
+      <div
+        class="w-40 h-40 bg-emerald-400 rounded-lg flex items-center justify-center text-white font-bold text-lg invisible"
+      >
+        Sản phẩm 5
+      </div>
+      <div class="w-40 h-40 bg-purple-400 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+        Sản phẩm 6
+      </div>
+    </div>
+  </body>
+</html>
