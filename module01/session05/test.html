@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lý thuyết</title>
+    <style>
+      * {
+        margin: 0;
+      }
+
+      .item {
+        border: 1px solid rgb(15, 15, 15);
+        color: white;
+        width: 200px;
+        height: 150px;
+      }
+
+      .item1 {
+        background-color: green;
+        position: absolute;
+        margin-left: 200px;
+      }
+
+      .item2 {
+        margin-left: 10px;
+        background-color: rgb(240, 28, 32);
+        position: absolute;
+        top: 50px;
+        left: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Position :
+     - Absolute( canh chỉnh vị trí phân tử HTML so với vị trí các phần từ cha hiện tại)
+
+    -->
+    <div class="item item1">
+      Item1
+      <div class="item item2">Item 2</div>
+    </div>
+  </body>
+</html>
