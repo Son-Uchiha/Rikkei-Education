@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giao diện Portfolio Navbar - image_2.png</title>
+    <!-- Nhúng Tailwind CSS qua CDN cho mục đích xem trước nhanh -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Cấu hình phông chữ custom và màu sắc chính xác từ hình ảnh
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "nav-bg": "#313d4e", // Màu nền xanh đậm chính xác
+              "nav-text": "#f4f6f8", // Màu chữ trắng-xám chính xác
+            },
+            fontFamily: {
+              nunito: ['"Nunito Sans"', "sans-serif"], // Phông chữ sạch, hiện đại
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Nhúng phông chữ Nunito Sans từ Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="font-nunito">
+    <!-- Thân điều hướng (Navbar) chính -->
+    <nav class="bg-nav-bg text-nav-text py-5 px-6 md:px-12">
+      <!-- Container để căn chỉnh nội dung -->
+      <div class="container mx-auto flex items-center justify-between">
+        <!-- Logo / Tên thương hiệu -->
+        <a href="#" class="text-3xl font-bold text-white"> MyPortfolio </a>
+
+        <!-- Menu điều hướng -->
+        <div class="flex items-center space-x-6 md:space-x-10 text-lg">
+          <a href="#intro" class="hover:text-white transition-colors"> Giới thiệu </a>
+          <a href="#skills" class="hover:text-white transition-colors"> Kỹ năng </a>
+          <a href="#projects" class="hover:text-white transition-colors"> Dự án </a>
+          <a href="#contact" class="hover:text-white transition-colors"> Liên hệ </a>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
