@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rikkei BookStore - Sách Nổi Bật</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen font-sans">
+
+  <!-- Header / Navigation Bar (Nền đen) -->
+  <nav class="bg-neutral-900 text-white px-4 sm:px-6 lg:px-8 py-4 shadow-md">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="text-xl font-bold tracking-wide hover:text-gray-200 transition-colors">
+        Rikkei BookStore
+      </a>
+
+      <!-- Desktop Links (Ẩn trên mobile) -->
+      <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-300">
+        <a href="#" class="text-white hover:text-gray-300 transition-colors">Trang chủ</a>
+        <a href="#" class="hover:text-white transition-colors">Sách Mới</a>
+        <a href="#" class="hover:text-white transition-colors">Khuyến Mãi</a>
+      </div>
+
+      <!-- Hamburger Button (Hiện trên mobile) -->
+      <button 
+        id="menu-toggle" 
+        type="button" 
+        class="md:hidden p-2 rounded-lg border border-gray-600 text-gray-300 hover:bg-neutral-800 focus:outline-none"
+        aria-label="Toggle Navigation"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Navigation Menu Links (Ẩn mặc định) -->
+    <div id="mobile-menu" class="hidden md:hidden max-w-6xl mx-auto mt-3 pt-3 border-t border-neutral-800 space-y-2 text-sm font-medium text-gray-300">
+      <a href="#" class="block text-white hover:text-gray-300 py-1 transition-colors">Trang chủ</a>
+      <a href="#" class="block hover:text-white py-1 transition-colors">Sách Mới</a>
+      <a href="#" class="block hover:text-white py-1 transition-colors">Khuyến Mãi</a>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+    
+    <!-- Page Title -->
+    <h1 class="text-3xl sm:text-4xl font-bold text-center text-gray-900">
+      Sách Nổi Bật
+    </h1>
+
+    <!-- Grid Danh Sách Sách (Responsive: 1 cột trên Mobile, 2 cột trên Tablet/Desktop) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+      
+      <!-- Card Sách 1 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 flex flex-col justify-between">
+        <!-- Ảnh sách -->
+        <div class="h-64 sm:h-72 overflow-hidden bg-gray-200">
+          <img 
+            src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80" 
+            alt="Hành Trình Về Phương Đông" 
+            class="w-full h-full object-cover block"
+          />
+        </div>
+        <!-- Thông tin sách -->
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <h2 class="text-xl font-bold text-gray-900">
+              Hành Trình Về Phương Đông
+            </h2>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Một tác phẩm kinh điển khám phá những giá trị tâm linh và triết lý đặc sắc của người phương Đông qua góc nhìn của các học giả phương Tây.
+            </p>
+          </div>
+          <button 
+            type="button" 
+            class="buy-now-btn w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-medium py-2.5 px-4 rounded-lg transition-colors shadow-sm focus:ring-4 focus:ring-blue-200"
+          >
+            Mua ngay
+          </button>
+        </div>
+      </div>
+
+      <!-- Card Sách 2 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 flex flex-col justify-between">
+        <!-- Ảnh sách màu vàng -->
+        <div class="h-64 sm:h-72 overflow-hidden bg-amber-400 flex items-center justify-center p-4">
+          <img 
+            src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=800&q=80" 
+            alt="Đắc Nhân Tâm" 
+            class="h-full object-contain drop-shadow-md rounded block"
+          />
+        </div>
+        <!-- Thông tin sách -->
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <h2 class="text-xl font-bold text-gray-900">
+              Đắc Nhân Tâm
+            </h2>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Cuốn sách nổi tiếng nhất mọi thời đại về nghệ thuật giao tiếp, thu phục lòng người và xây dựng các mối quan hệ thành công.
+            </p>
+          </div>
+          <button 
+            type="button" 
+            class="buy-now-btn w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-medium py-2.5 px-4 rounded-lg transition-colors shadow-sm focus:ring-4 focus:ring-blue-200"
+          >
+            Mua ngay
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Modal Popup Thông Báo Thành Công -->
+  <div 
+    id="success-modal" 
+    class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm items-center justify-center p-4 z-50 transition-opacity duration-200"
+  >
+    <!-- Modal Card Box -->
+    <div class="bg-white rounded-xl shadow-2xl max-w-md w-full overflow-hidden border border-gray-100 relative space-y-0">
+      
+      <!-- Modal Header (Nền xanh lá & Nút đóng X) -->
+      <div class="bg-emerald-600 text-white px-6 py-4 flex items-center justify-between">
+        <h3 class="text-lg font-bold">
+          Thành công
+        </h3>
+        <button 
+          id="close-modal-x" 
+          type="button" 
+          class="text-emerald-100 hover:text-white focus:outline-none p-1 rounded transition-colors"
+          aria-label="Đóng"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Modal Body (Thông báo có emoji) -->
+      <div class="p-6 text-center sm:text-left">
+        <p class="text-gray-700 font-medium text-base flex items-center justify-center sm:justify-start gap-2">
+          <span>🎉</span> Đã thêm sản phẩm vào giỏ hàng thành công!
+        </p>
+      </div>
+
+      <!-- Modal Footer (Các nút bấm) -->
+      <div class="bg-gray-50 px-6 py-4 flex items-center justify-end space-x-3 border-t border-gray-100">
+        <button 
+          id="continue-btn" 
+          type="button" 
+          class="bg-slate-600 hover:bg-slate-700 text-white text-sm font-medium px-4 py-2.5 rounded-lg transition-colors focus:ring-4 focus:ring-slate-200"
+        >
+          Tiếp tục mua sắm
+        </button>
+        <button 
+          id="cart-btn" 
+          type="button" 
+          class="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium px-4 py-2.5 rounded-lg transition-colors focus:ring-4 focus:ring-emerald-200"
+        >
+          Đến giỏ hàng
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript xử lý Toggle Navbar Mobile & Modal Popup -->
+  <script>
+    // Xử lý Toggle Mobile Navbar Menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Xử lý Modal Popup Thành công
+    const modal = document.getElementById('success-modal');
+    const closeX = document.getElementById('close-modal-x');
+    const continueBtn = document.getElementById('continue-btn');
+    const cartBtn = document.getElementById('cart-btn');
+    const buyBtns = document.querySelectorAll('.buy-now-btn');
+
+    // Mở modal khi bấm nút "Mua ngay"
+    buyBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      });
+    });
+
+    // Đóng modal
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    closeX.addEventListener('click', closeModal);
+    continueBtn.addEventListener('click', closeModal);
+    cartBtn.addEventListener('click', () => {
+      alert("Đang chuyển sang trang Giỏ hàng!");
+      closeModal();
+    });
+
+    // Đóng khi click ngoài backdrop
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  </script>
+
+</body>
+</html>
