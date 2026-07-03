@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh Sách Sách Kèm Trạng Thái Xóa - Modal Tailwind CSS</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-200 min-h-screen py-10 px-4 sm:px-6 lg:px-8 font-sans relative">
+
+  <div class="max-w-5xl mx-auto space-y-8">
+    <!-- Tiêu đề trang -->
+    <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900">
+      Danh Sách Sách Kèm Trạng Thái Xóa
+    </h2>
+
+    <!-- Bảng dữ liệu chính -->
+    <div class="bg-white rounded-lg shadow-sm overflow-x-auto">
+      <table class="w-full text-left text-sm text-gray-900 border-collapse">
+        <!-- Header Bảng (Nền đen) -->
+        <thead>
+          <tr class="bg-neutral-900 text-white font-bold">
+            <th scope="col" class="py-3.5 px-6 font-bold w-20">ID</th>
+            <th scope="col" class="py-3.5 px-6 font-bold">Tên Sách</th>
+            <th scope="col" class="py-3.5 px-6 font-bold">Tác Giả</th>
+            <th scope="col" class="py-3.5 px-6 font-bold text-center w-28">Thao tác</th>
+          </tr>
+        </thead>
+        <!-- Body Bảng -->
+        <tbody class="divide-y divide-gray-200">
+          <!-- Hàng 1 -->
+          <tr class="bg-gray-100 hover:bg-gray-200/70 transition-colors">
+            <td class="py-3.5 px-6 font-bold">1</td>
+            <td class="py-3.5 px-6 font-medium text-gray-900">Hành Trình Về Phương Đông</td>
+            <td class="py-3.5 px-6">Baird T. Spalding</td>
+            <td class="py-3.5 px-6 text-center">
+              <button 
+                type="button" 
+                class="open-modal-btn bg-red-600 hover:bg-red-700 text-white text-xs font-medium px-3 py-1.5 rounded transition-colors"
+              >
+                Xóa
+              </button>
+            </td>
+          </tr>
+          <!-- Hàng 2 -->
+          <tr class="bg-white hover:bg-gray-50 transition-colors">
+            <td class="py-3.5 px-6 font-bold">2</td>
+            <td class="py-3.5 px-6 font-medium text-gray-900">Đắc Nhân Tâm</td>
+            <td class="py-3.5 px-6">Dale Carnegie</td>
+            <td class="py-3.5 px-6 text-center">
+              <button 
+                type="button" 
+                class="open-modal-btn bg-red-600 hover:bg-red-700 text-white text-xs font-medium px-3 py-1.5 rounded transition-colors"
+              >
+                Xóa
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal Popup (Xác nhận xóa) -->
+  <div 
+    id="delete-modal" 
+    class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm items-center justify-center p-4 z-50 transition-opacity duration-200"
+  >
+    <!-- Modal Card Box -->
+    <div class="bg-white rounded-xl shadow-2xl max-w-md w-full p-6 space-y-4 border border-gray-100 relative">
+      
+      <!-- Modal Header (Tiêu đề đỏ & Nút đóng X) -->
+      <div class="flex items-center justify-between pb-3 border-b border-gray-100">
+        <h3 class="text-lg font-bold text-red-600">
+          Xác nhận xóa
+        </h3>
+        <button 
+          id="close-modal-x" 
+          type="button" 
+          class="text-gray-400 hover:text-gray-600 focus:outline-none p-1 rounded-lg"
+          aria-label="Đóng"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Modal Body (Nội dung thông báo) -->
+      <div class="py-2">
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Bạn có chắc chắn muốn xóa cuốn sách này không? Hành động này không thể hoàn tác.
+        </p>
+      </div>
+
+      <!-- Modal Footer (Các nút bấm Hủy & Xác nhận) -->
+      <div class="flex items-center justify-end space-x-3 pt-3 border-t border-gray-100">
+        <button 
+          id="cancel-btn" 
+          type="button" 
+          class="bg-slate-600 hover:bg-slate-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors focus:ring-2 focus:ring-slate-400"
+        >
+          Hủy
+        </button>
+        <button 
+          id="confirm-delete-btn" 
+          type="button" 
+          class="bg-red-600 hover:bg-red-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors focus:ring-2 focus:ring-red-400"
+        >
+          Xác nhận
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript chỉ mở Modal khi bấm nút "Xóa" -->
+  <script>
+    const modal = document.getElementById('delete-modal');
+    const closeX = document.getElementById('close-modal-x');
+    const cancelBtn = document.getElementById('cancel-btn');
+    const confirmBtn = document.getElementById('confirm-delete-btn');
+    const deleteBtns = document.querySelectorAll('.open-modal-btn');
+
+    // Chỉ bật modal khi nhấp chuột vào nút "Xóa"
+    deleteBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Ngăn sự kiện nổi bọt
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      });
+    });
+
+    // Hàm đóng modal
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Gán sự kiện đóng modal
+    closeX.addEventListener('click', closeModal);
+    cancelBtn.addEventListener('click', closeModal);
+    confirmBtn.addEventListener('click', closeModal);
+
+    // Đóng khi click ra lớp nền mờ ngoài cửa sổ modal
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  </script>
+
+</body>
+</html>
