@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thêm Sách Mới - Form Tailwind CSS</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-4 sm:p-6 font-sans">
+
+  <!-- Form Container -->
+  <div class="w-full max-w-lg bg-white rounded-xl border border-gray-200 shadow-sm p-6 sm:p-8">
+    
+    <!-- Tiêu đề -->
+    <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-6">
+      Thêm Sách Mới
+    </h2>
+
+    <!-- Form Thêm Sách -->
+    <form class="space-y-5" onsubmit="event.preventDefault();">
+      
+      <!-- Trường 1: Tên sách -->
+      <div>
+        <label for="book-title" class="block text-sm font-bold text-gray-900 mb-2">
+          Tên sách
+        </label>
+        <input 
+          type="text" 
+          id="book-title" 
+          name="book-title"
+          placeholder="Nhập tên sách..." 
+          class="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-700 placeholder-gray-400 text-sm transition-all"
+        />
+      </div>
+
+      <!-- Trường 2: Tác giả -->
+      <div>
+        <label for="author" class="block text-sm font-bold text-gray-900 mb-2">
+          Tác giả
+        </label>
+        <input 
+          type="text" 
+          id="author" 
+          name="author"
+          placeholder="Nhập tên tác giả..." 
+          class="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-700 placeholder-gray-400 text-sm transition-all"
+        />
+      </div>
+
+      <!-- Trường 3: Thể loại -->
+      <div>
+        <label for="category" class="block text-sm font-bold text-gray-900 mb-2">
+          Thể loại
+        </label>
+        <select 
+          id="category" 
+          name="category"
+          class="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-600 text-sm bg-white transition-all cursor-pointer"
+        >
+          <option value="" disabled selected>Chọn thể loại...</option>
+          <option value="van-hoc">Văn học</option>
+          <option value="kieu-triet-ly">Triết lý - Tâm linh</option>
+          <option value="ky-nang-song">Kỹ năng sống</option>
+          <option value="kinh-te">Kinh tế - Khởi nghiệp</option>
+        </select>
+      </div>
+
+      <!-- Nút Thêm sách -->
+      <div class="pt-2">
+        <button 
+          type="submit" 
+          class="w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-medium py-3 px-4 rounded-lg transition-colors focus:ring-4 focus:ring-blue-200"
+        >
+          Thêm sách
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+
+</body>
+</html>
