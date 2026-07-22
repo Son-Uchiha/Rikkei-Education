@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiểm tra số âm dương</title>
+  </head>
+  <body>
+    <script>
+      // Nhập số trực tiếp từ trình duyệt
+      let input = prompt("Nhập vào một số bất kỳ:");
+      let num = Number(input);
+
+      // Kiểm tra và phân loại số
+      if (num > 0) {
+        console.log("Số dương");
+        alert("Số dương");
+      } else if (num < 0) {
+        console.log("Số âm");
+        alert("Số âm");
+      } else {
+        console.log("Số không");
+        alert("Số không");
+      }
+    </script>
+  </body>
+</html>
