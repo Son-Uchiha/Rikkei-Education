@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let n = Number(prompt("Nhập vào 1 số nguyên bất kì"));
+
+      const CheckSnt = (n) => {
+        for (let i = 2; i * i <= n; ++i) if (n % i === 0) return false;
+        return n > 1;
+      };
+
+      if (CheckSnt(n)) console.log(n + " Là số nguyên tố");
+      else console.log(n + " Không phải số nguyên tố");
+    </script>
+  </body>
+</html>
